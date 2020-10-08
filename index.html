@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Complex Get Requests Assignment</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet"
+        type="text/css" />
+    <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body class="wrapper">
+    <header>
+        <h1>National Parks Search</h1>
+    </header>
+    <main class="main">
+        <form id="js-search-form">
+            <label for="state">Please enter one or more state abbreviations, sepparated by a comma (ex: CA, NM).</label>
+            <input id="js-state" type="text" placeholder="CA, NM" required>
+            <label for="max-results">Max results?</label>
+            <input id="js-max-results" type="number" value="10" required>
+            <input type="submit" value="Search">
+        </form>
+        <p id="js-error-message" class="error-message"></p>
+        <section id="results" class="hidden">
+            <h2>Search results</h2>
+            <ul id="results-list">
+            </ul>
+        </section>
+    </main>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.js" crossorigin="anonymous"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>

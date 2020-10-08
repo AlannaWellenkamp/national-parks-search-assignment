@@ -1,0 +1,20 @@
+* {
+    box-sizing: border-box;
+}
+
+.wrapper {
+    width: 85%;
+    margin: auto;
+}
+
+label {
+    display: block;
+}
+
+.error-message {
+    color: red;
+}
+
+.hidden {
+  display: none;
+}
