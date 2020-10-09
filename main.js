@@ -3,14 +3,8 @@
 const apiKey = 'qloeqISPUSKm2wlaPoDL7yPgNvjwOSHwPKBeDvO5'
 const searchURL = 'https://developer.nps.gov/api/v1/parks'
 
-
-
-
-
-
-
 function formatQueryParams(params) {
-    const queryItems = Object.keys(params).map(key => `${[encodeURIComponent(key)]}=${encodeURIComponent(params[key])}`);
+    const queryItems = Object.keys(params).map(key => `${[key]}=${(params[key])}`);
     return queryItems.join('&');
 }
 
@@ -72,9 +66,9 @@ function getSearchResults(states, maxResults) {
 function submitListen() {
     $('#js-search-form').submit(e => {
         e.preventDefault();
-        const states = $('#js-state').val().split(", ");
+        const states = $('#state').val().split(", ");
         console.log(states);
-        const maxResults = $('#js-max-results').val();
+        const maxResults = $('#max-results').val();
         console.log(maxResults);
         getSearchResults(states, maxResults);
     })
